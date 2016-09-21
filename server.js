@@ -5,11 +5,69 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleone={
+    title:"Article one",
+    heading:"article-one",
+    date:"sept 3243,34643",
+    content:` <p>
+            This is Article-one...Thi was created by me....is this even bearable??dgjktgdifgjnetkehrthervtnvrkjrkvtrkjvtr
+            rbvrgrknfbgrftbfrtjmrtfhfkhfbhjfh.bfh
+            fgbhlfgmhjbfjmflmhlfjlfufrlg
+            
+        </p>
+                <p>
+            This is Article-one...Thi was created by me....is this even bearable??dgjktgdifgjnetkehrthervtnvrkjrkvtrkjvtr
+            rbvrgrknfbgrftbfrtjmrtfhfkhfbhjfh.bfh
+            fgbhlfgmhjbfjmflmhlfjlfufrlg
+            
+        </p>
+       <p>
+            This is Article-one...Thi was created by me....is this even bearable??dgjktgdifgjnetkehrthervtnvrkjrkvtrkjvtr
+            rbvrgrknfbgrftbfrtjmrtfhfkhfbhjfh.bfh
+            fgbhlfgmhjbfjmflmhlfjlfufrlg
+            </p>`
+    
+};
+function createtemplate(data){
+    var title=data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var content=data.content;
+var htmltemplate=`<html>
+    <head>
+        <title>${title}</title>
+        <meta name="viewport" content="width-device-width,initial scale=1" />
+  <link href="ui/style.css" rel="stylesheeet">
+    </head>
+    <body>
+        <div class="container">
+       <div>
+          <h3>
+           ${heading}<hr>
+        </h3>
+    </div>
+        <div>
+            <h2>
+        ${date}
+         </h2>
+         </div>   
+      ${content}
+            
+        </p>
+        </div>
+    </body>
+</html>`
+;
+return htmltemplate;    
+
+}
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/article-one',function(req,res){
-      res.sendFile(path.join(__dirname,'article-one.html'));
+      res.send(createtemplate(articleone));
 });app.get('/article-two',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
