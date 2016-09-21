@@ -4,8 +4,8 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
-var articleone={
+var articles={
+   'article-one':{
     title:"Article one",
     heading:"article-one",
     date:"sept 3243,34643",
@@ -27,6 +27,53 @@ var articleone={
             fgbhlfgmhjbfjmflmhlfjlfufrlg
             </p>`
     
+},
+  'article-two':{
+       title:"Article 2222",
+    heading:"article-two",
+    date:"oct,3rd",
+    content:` <p>
+            This is Article-two...Thi was created by me....is this even bearable??dgjktgdifgjnetkehrthervtnvrkjrkvtrkjvtr
+            rbvrgrknfbgrftbfrtjmrtfhfkhfbhjfh.bfh
+            fgbhlfgmhjbfjmflmhlfjlfufrlg
+            
+        </p>
+                <p>
+            This is Article-two...Thi was created by me....is this even bearable??dgjktgdifgjnetkehrthervtnvrkjrkvtrkjvtr
+            rbvrgrknfbgrftbfrtjmrtfhfkhfbhjfh.bfh
+            fgbhlfgmhjbfjmflmhlfjlfufrlg
+            
+        </p>
+       <p>
+            This is Article-two...Thi was created by me....is this even bearable??dgjktgdifgjnetkehrthervtnvrkjrkvtrkjvtr
+            rbvrgrknfbgrftbfrtjmrtfhfkhfbhjfh.bfh
+            fgbhlfgmhjbfjmflmhlfjlfufrlg
+            </p>`
+    
+  },
+    'article-three':{
+         title:"Article three",
+    heading:"article-3",
+    date:"sept 34",
+    content:` <p>
+            This is Article-3...Thi was created by me....is this even bearable??dgjktgdifgjnetkehrthervtnvrkjrkvtrkjvtr
+            rbvrgrknfbgrftbfrtjmrtfhfkhfbhjfh.bfh
+            fgbhlfgmhjbfjmflmhlfjlfufrlg
+            
+        </p>
+                <p>
+            This is Article-3...Thi was created by me....is this even bearable??dgjktgdifgjnetkehrthervtnvrkjrkvtrkjvtr
+            rbvrgrknfbgrftbfrtjmrtfhfkhfbhjfh.bfh
+            fgbhlfgmhjbfjmflmhlfjlfufrlg
+            
+        </p>
+       <p>
+            This is Article-3...Thi was created by me....is this even bearable??dgjktgdifgjnetkehrthervtnvrkjrkvtrkjvtr
+            rbvrgrknfbgrftbfrtjmrtfhfkhfbhjfh.bfh
+            fgbhlfgmhjbfjmflmhlfjlfufrlg
+            </p>`
+    
+    }
 };
 function createtemplate(data){
     var title=data.title;
@@ -66,13 +113,9 @@ return htmltemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one',function(req,res){
-      res.send(createtemplate(articleone));
-});app.get('/article-two',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-app.get('/article-three',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+app.get('/:articleName',function(req,res){
+var articleName=req.params.articleName;
+      res.send(createtemplate(articles[articleName]));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
