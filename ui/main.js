@@ -4,5 +4,5 @@ element.innerHTML="HOLLLAAAAAA!!!";
 
 var img=document.getElementById('img');
 img.onclick=function(){
-  img.style.marginLeft='200px';   
+  img.style.marginLeft='500px';   
 };
