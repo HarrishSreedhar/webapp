@@ -36,7 +36,7 @@ button.onclick=function(){
     request.open('GET','http://harrishsreedhar.imad.hasura-app.io/counter',true);
     request.send(null);*/
     counter=counter+1;
-    var span=document.getElementById("count");
+    var span=document.getElementById('count');
     span.innetHTML=counter.toString();
 };
      
