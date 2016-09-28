@@ -24,7 +24,16 @@
       This button <button id="counter">Click me </button> has been clicked <span id="count"> 0 </span> times
           </div>
           </div>
-         <script type="text/javascript" src="/ui/main.js">
+         <script type="text/javascript">
+         var button=document.getElementById('counter');
+ var c=0;
+
+button.onclick=function(){
+   // alert('inside count');
+   
+    c+=1;
+    var span=document.getElementById('count');
+    span.innetHTML=c.toString();
         </script>
         
     </body>
