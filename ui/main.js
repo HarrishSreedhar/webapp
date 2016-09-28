@@ -16,7 +16,7 @@ img.onclick=function(){
 
  //counter
  var button=document.getElementById('counter');
-var counter=0;
+var counter;
 button.onclick=function(){
  /*   var request= new XMLHttpRequest();
 //dfgdf
