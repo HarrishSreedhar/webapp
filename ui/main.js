@@ -37,14 +37,14 @@ img.onclick=function(){
  //counter
  
  var button=document.getElementById('counter');
- var c=0;
+ var counter=0;
 
 button.onclick=function(){
    // alert('inside count');
    
-    c+=1;
+    counter=counter+1;
     var span=document.getElementById('count');
-    span.innerHTML=c.toString();
+    span.innerHTML=counter.toString();
 };
      
  
