@@ -35,7 +35,7 @@ img.onclick=function(){
  //counter
  
  var button=document.getElementById('counter');
-var counter;
+var counter=0;
 button.onclick=function(){
  
     counter+=1;
