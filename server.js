@@ -83,7 +83,8 @@ function createtemplate(data){
 var htmltemplate=`<html>
     <head>
         <title>${title}</title>
-        <meta name="viewport" content="width-device-width,initial scale=1" />
+        <meta name="viewport" content="width-device-width, initial scale=1" />
+        Triald dsgdgdfg
   <link href="/ui/style.css" rel="stylesheeet" />
     </head>
     <body>
