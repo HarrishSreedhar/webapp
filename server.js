@@ -116,7 +116,7 @@ var htmltemplate=`<html>
 return htmltemplate;    
 
 }
-var counter=0;
+var counter=5;
 app.get('/counter',function(req,res){
    counter+=1;
    res.send(counter.toString());
