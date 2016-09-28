@@ -30,8 +30,11 @@ button.onclick=function(){
 };*/
      
   //counter
- var button=document.getElementById('counter');
-button.onclick=function(){
+ //var button=document.getElementById('counter');
+var ninput=document.getElementById('name');
+var n=ninput.value;
+var submit=document.getElementById('submit_btn');
+submit.onclick=function(){
     var request= new XMLHttpRequest();
 
     
@@ -40,14 +43,21 @@ button.onclick=function(){
         {
             if(request.status===200)
             {
-                var counter=request.responseText;
-                  var span=document.getElementById('count');
-                span.innerHTML=counter.toString();
+              var names=request.responseText;
+              names=JSON.parse(names);
+            var list='';
+            for(var i=0;i<names.length;i++) 
+            {
+                list+='<li>'+names[i];
+            }
+
+    var ul=document.getElementById('namelist');
+    ul.innerHTML=list;
              }
         }
         
     }
-    request.open('GET','http://harrishsreedhar.imad.hasura-app.io/counter',true);
+    request.open('GET','http://harrishsreedhar.imad.hasura-app.io/submit-name/'+n,true);
     request.send(null);
 };
 //name
@@ -55,14 +65,6 @@ var ninput=document.getElementById('name');
 var n=ninput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
-var names=['name1','name2','name3','name4'];
-var list='';
-for(var i=0;i<names.length;i++)
-{
-list+='<li>'+names[i];
-}
 
-    var ul=document.getElementById('namelist');
-    ul.innerHTML=list;
 };
 
