@@ -84,8 +84,15 @@ var htmltemplate=`<html>
     <head>
         <title>${title}</title>
         <meta name="viewport" content="width-device-width, initial scale=1" />
-        Triald dsgdgdfg
-  <link href="/ui/style.css" rel="stylesheeet" />
+         <style>
+ .container {
+    max-width: 800px;
+    color: #dda22b;
+    font-family: sans-serif;
+    padding-top: 60px;
+    padding-left: 100px;
+}
+</style>
     </head>
     <body>
         <div class="container">
@@ -114,13 +121,13 @@ return htmltemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one',function(req,res){
-res.sendFile(path.join(__dirname,'article-one.html')); 
-});
-//app.get('/:articleName',function(req,res){
-//var articleName=req.params.articleName;
-  //    res.send(createtemplate(articles[articleName]));
+//app.get('/article-one',function(req,res){
+//res.sendFile(path.join(__dirname,'article-one.html')); 
 //});
+app.get('/:articleName',function(req,res){
+var articleName=req.params.articleName;
+    res.send(createtemplate(articles[articleName]));
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
