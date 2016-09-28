@@ -13,12 +13,7 @@ img.onclick=function(){
  // img.style.marginRight='500px';   
 };*/
 
-
- //counter
- var button=document.getElementById('counter');
-var counter;
-button.onclick=function(){
- /*   var request= new XMLHttpRequest();
+/*   var request= new XMLHttpRequest();
 //dfgdf
     
     request.onreadystatechange= function(){
@@ -35,7 +30,15 @@ button.onclick=function(){
     }
     request.open('GET','http://harrishsreedhar.imad.hasura-app.io/counter',true);
     request.send(null);*/
-    counter=counter+1;
+    
+
+ //counter
+ 
+ var button=document.getElementById('counter');
+var counter;
+button.onclick=function(){
+ 
+    counter+=1;
     var span=document.getElementById('count');
     span.innetHTML=counter.toString();
 };
