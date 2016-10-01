@@ -38,7 +38,7 @@ submit.onclick=function(){
 
     
     request.onreadystatechange= function(){
-        alert(hola);
+       
         if(request.readyState===XMLHttpRequest.DONE)
         {
             if(request.status===200)
