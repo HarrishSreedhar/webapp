@@ -31,8 +31,7 @@ button.onclick=function(){
      
   //counter
  //var button=document.getElementById('counter');
-var ninput=document.getElementById('name');
-var n=ninput.value;
+
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
     var request= new XMLHttpRequest();
@@ -64,8 +63,7 @@ submit.onclick=function(){
 //name
 var ninput=document.getElementById('name');
 var n=ninput.value;
-var submit=document.getElementById('submit_btn');
-submit.onclick=function(){
+
 
 };
 
