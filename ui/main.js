@@ -60,7 +60,7 @@ submit.onclick=function(){
     var ninput=document.getElementById('name');
 var n=ninput.value;
     request.open('GET','http://harrishsreedhar.imad.hasura-app.io/submit-name/'+n,true);
-    request.send(n);
+    request.send(null);
 };
 //name
 
