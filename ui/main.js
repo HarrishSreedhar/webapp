@@ -7,7 +7,7 @@ request.onreadystatechange=function(){
             var counter=request.responseText;
             //var cr=JSON.parse(counter);
             var sp=document.getElementById("span");
-        sp.innerHTML=cr.toString();
+        sp.innerHTML=counter.toString();
        // console.log(counter)
         }
     }
