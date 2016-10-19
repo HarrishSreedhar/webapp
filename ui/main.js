@@ -20,11 +20,11 @@ request.onreadystatechange=function(){
 var sub=document.getElementById("susubmit_btn");
 
 sub.onclick=function(){
-    var req=new XMLHttpRequest();
-    req.onreadystatechange=function(){
-       if(req.readyState===XMLHttpRequest.DONE) {
-           if(req.status===200){
-               var n=req.responseText;
+    var request=new XMLHttpRequest();
+    request.onreadystatechange=function(){
+       if(request.readyState===XMLHttpRequest.DONE) {
+           if(request.status===200){
+               var n=request.responseText;
                n=JSON.parse(n);
                var list='';
                for(var i=0;i<n.length;i++)
@@ -38,6 +38,6 @@ sub.onclick=function(){
     };
      var name=document.getElementById("name");
      var n=name.value;
-     req.open("GET","http://harrishsreedhar.imad.hasura-app.io/submit-name?name="+n,true);
-     req.send(null);
+     request.open("GET","http://harrishsreedhar.imad.hasura-app.io/submit-name?name="+n,true);
+     request.send(null);
 };
