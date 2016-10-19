@@ -5,9 +5,9 @@ request.onreadystatechange=function(){
     if(request.readyState===XMLHttpRequest.DONE){
         if(request.status===200){
             var counter=request.responseText;
-            //counter=JSON.parse(counter);
+            var cr=JSON.parse(counter);
             var sp=document.getElementById("span");
-        sp.innerHTML=counter.toString();
+        sp.innerHTML=cr.toString();
        // console.log(counter)
         }
     }
