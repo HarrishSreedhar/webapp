@@ -13,6 +13,6 @@ request.onreadystatechange=function(){
         }
     }
 }
-    request.open("GET","http://harrishsreedhar.imad.hasura-app.io/article-three",true);
+    request.open("GET","http://harrishsreedhar.imad.hasura-app.io/counter",true);
     request.send(null);
 };
