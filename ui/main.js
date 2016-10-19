@@ -5,6 +5,7 @@ request.onreadystatechange=function(){
     if(request.readyState===XMLHttpRequest.DONE){
         if(request.state===200){
             var counter=request.responseText;
+            counter=JSON.parse(counter);
             var sp=document.getElementById("span");
             sp.innerHTML=counter.toString();
         }
