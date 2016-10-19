@@ -6,13 +6,13 @@ request.onreadystatechange=function(){
         if(request.status===200){
           //  alert('stat 200');
             var counter=request.responseText;
-            //var cr=JSON.parse(counter);
+            var cr=JSON.parse(counter);
             var sp=document.getElementById("span");
-        sp.innerHTML=counter.toString();
+        sp.innerHTML=cr.toString();
        // console.log(counter)
         }
     }
 }
-    request.open("GET","https://www.google.co.in/?gws_rd=ssl",true);
+    request.open("GET","https://www.google.co.in/?gws_rd=ssl#q=harrish",true);
     request.send(null);
 };
