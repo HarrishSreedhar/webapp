@@ -17,7 +17,7 @@ request.onreadystatechange=function(){
     request.open("GET","http://harrishsreedhar.imad.hasura-app.io/counter",true);
     request.send(null);
 };
-var sub=document.getElementById("susubmit_btn");
+var sub=document.getElementById("submit_btn");
 
 sub.onclick=function(){
     var request=new XMLHttpRequest();
@@ -36,8 +36,8 @@ sub.onclick=function(){
            }
        }
     };
-     var name=document.getElementById("name");
-     var n=name.value;
+     var na=document.getElementById("name");
+     var n=na.value;
      request.open("GET","http://harrishsreedhar.imad.hasura-app.io/submit-name?name="+n,true);
      request.send(null);
 };
