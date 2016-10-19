@@ -119,7 +119,7 @@ return htmltemplate;
 var counter=0;
 app.get('/counter',function(req,res){
    counter+=1;
-   res.send(counter.toString());
+   res.send(counter);
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
