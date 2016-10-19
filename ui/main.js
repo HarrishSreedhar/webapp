@@ -13,6 +13,6 @@ request.onreadystatechange=function(){
         }
     }
 }
-    request.open("GET","https://www.google.co.in/?gws_rd=ssl#q=harrish",true);
+    request.open("GET","http://harrishsreedhar.imad.hasura-app.io/article-three",true);
     request.send(null);
 };
