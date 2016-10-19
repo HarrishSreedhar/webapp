@@ -4,11 +4,11 @@ var request=new XMLHttpRequest();
 request.onreadystatechange=function(){
     if(request.readyState===XMLHttpRequest.DONE){
         if(request.status===200){
-            var counter=request.responseText;
-            var cr=JSON.parse(counter);
+          //  var counter=request.responseText;
+            //var cr=JSON.parse(counter);
+            var c="holalal"
             var sp=document.getElementById("span");
-        sp.innerHTML=cr.toString();
-       // console.log(counter)
+        sp.innerHTML=cr;       // console.log(counter)
         }
     }
 }
