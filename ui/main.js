@@ -7,9 +7,9 @@ request.onreadystatechange=function(){
           //  alert('stat 200');
             var counter=request.responseText;
            // var cr=JSON.parse(counter);
-           var cr="safsddsfs";
+         //  var cr="safsddsfs";
             var sp=document.getElementById("count");
-        sp.innerHTML=cr;
+        sp.innerHTML=counter.toString();
        // console.log(counter)
         }
     }
