@@ -13,7 +13,31 @@ request.onreadystatechange=function(){
        // console.log(counter)
         }
     }
-}
+};
     request.open("GET","http://harrishsreedhar.imad.hasura-app.io/counter",true);
     request.send(null);
+};
+var sub=document.getElementById("susubmit_btn");
+
+sub.onclick=function(){
+    var req=new XMLHttpRequest();
+    req.onreadystatechange=function(){
+       if(req.readyState===XMLHttpRequest.DONE) {
+           if(req.status===200){
+               var n=req.responseText;
+               n=JSON.parse(n);
+               var list='';
+               for(var i=0;i<n.length;i++)
+               {
+                   list+='<li>'+n[i]+'</li>';
+               }
+                var ul = document.getElementById('namelist');
+                    ul.innerHTML = list;
+           }
+       }
+    };
+     var name=document.getElementById("name");
+     var n=name.value;
+     req.open("GET","http://harrishsreedhar.imad.hasura-app.io/submit-name?name="+n,true);
+     req.send(null);
 };
