@@ -6,7 +6,7 @@ request.onreadystatechange=function(){
         if(request.status===200){
           //  var counter=request.responseText;
             //var cr=JSON.parse(counter);
-            var c="holalal;
+            var c="holalal";
             var sp=document.getElementById("span");
         sp.innerHTML=c;       // console.log//(counter)
         }
