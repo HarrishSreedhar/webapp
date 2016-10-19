@@ -8,7 +8,7 @@ request.onreadystatechange=function(){
             //var cr=JSON.parse(counter);
             var c="holalal"
             var sp=document.getElementById("span");
-        sp.innerHTML=c;       // console.log(counter)
+        sp.innerHTML=c;       // console.log//(counter)
         }
     }
 }
