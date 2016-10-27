@@ -11,7 +11,7 @@ var config={
 };
 var app = express();
 app.use(morgan('combined'));
-var articles={
+/*var articles={
    'article-one':{
     title:"Article one",
     heading:"article-one",
@@ -82,7 +82,7 @@ var articles={
             </p>`
     
     }
-};
+};*/
 function createtemplate(data){
     var title=data.title;
     var heading=data.heading;
