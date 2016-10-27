@@ -62,7 +62,8 @@ var articles={
          title:"Article three",
     heading:"article-3",
     date:"sept 34",
-    content:` <p>
+    content:`
+    <p>
             This is Article-3...Thi was created by me....is this even bearable??dgjktgdifgjnetkehrthervtnvrkjrkvtrkjvtr
             rbvrgrknfbgrftbfrtjmrtfhfkhfbhjfh.bfh
             fgbhlfgmhjbfjmflmhlfjlfufrlg
