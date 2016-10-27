@@ -161,7 +161,8 @@ app.get('/articles/:articleName',function(req,res){
      if(err){
          res.err(500).send(err.toString());
      }
-     else if(res.rows.length===0)
+     else{ 
+     if(res.rows.length===0)
      {
          res.err(404).send(err.toString());
      }
@@ -169,6 +170,7 @@ app.get('/articles/:articleName',function(req,res){
      {
          var articleData=result.rows[0];
            res.send(createtemplate(articleData));
+     }
      }
  });
   
