@@ -155,9 +155,23 @@ app.get('/', function (req, res) {
 //app.get('/article-one',function(req,res){
 //res.sendFile(path.join(__dirname,'article-one.html')); 
 //});
-app.get('/:articleName',function(req,res){
-var articleName=req.params.articleName;
-    res.send(createtemplate(articles[articleName]));
+app.get('/articles/:articleName',function(req,res){
+
+ pool.query("SELECT * FROM articles where 'title'="+req.params.articleName,function(err,res){
+     if(err){
+         res.err(500).send(err.toString());
+     }
+     else if(res.rows.length===0)
+     {
+         res.err(404).send(err.toString());
+     }
+     else
+     {
+         var articleData=result.rows[0];
+           res.send(createtemplate(articleData));
+     }
+ });
+  
 });
 
 app.get('/ui/style.css', function (req, res) {
