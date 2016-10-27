@@ -157,12 +157,12 @@ app.get('/', function (req, res) {
 //});
 app.get('/article/:articleName',function(req,res){
 
- pool.query("SELECT * FROM articles where 'title'="+req.params.articleName,function(err,res){
+ pool.query("SELECT * FROM articles where title="+req.params.articleName,function(err,result){
      if(err){
          res.err(500).send(err.toString());
      }
      else{ 
-     if(res.rows.length===0)
+     if(result.rows.length===0)
      {
          res.err(404).send(err.toString());
      }
