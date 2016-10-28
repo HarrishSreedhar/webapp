@@ -90,17 +90,10 @@ function createtemplate(data){
     var content=data.content;
 var htmltemplate=`<html>
     <head>
+     <link rel="stylesheet" type="text/css" href="ui/style.css">
         <title>${title}</title>
         <meta name="viewport" content="width-device-width, initial scale=1" />
-         <style>
- .container {
-    max-width: 800px;
-    color: #dda22b;
-    font-family: sans-serif;
-    padding-top: 60px;
-    padding-left: 100px;
-}
-</style>
+
     </head>
     <body>
         <div class="container">
